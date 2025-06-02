@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard ติดตาม Top-up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Chakra Petch', sans-serif; /* Updated Font */
+            margin: 0;
+            padding: 0;
+            background-color: #eef2f5; /* Slightly darker light grey-blue background */
+            color: #333; /* Even darker text for maximum readability */
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* More visible shadow */
+            flex-grow: 1;
+        }
+
+        /* Header Styles */
+        header {
+            background: #ffffff;
+            color: #2c4a5a; /* Much darker muted blue-grey text */
+            padding: 20px 20px 30px;
+            text-align: center;
+            border-radius: 12px 12px 0 0;
+            border-bottom: 1px solid #b0b5bb; /* Darker bottom border */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #2c4a5a; /* Consistent much darker muted blue-grey */
+        }
+        header h1 .fas {
+            margin-right: 10px;
+            color: #5eaad0; /* Darker light sky blue accent for icon */
+        }
+
+        /* Main Content Spacing */
+        main {
+            padding-top: 20px;
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 30px;
+            padding: 25px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #c0c5ca; /* Darker border */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* More visible shadow */
+        }
+
+        section h2 {
+            color: #2c4a5a; /* Much darker muted blue-grey for section titles */
+            margin-top: 0;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #b0b5bb; /* Darker border */
+            font-size: 1.8em;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        section h2 .fas {
+            margin-right: 10px;
+            color: #5eaad0; /* Darker light sky blue accent for icon */
+        }
+
+        /* Button Styles */
+        .button-container {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #5eaad0; /* Significantly darker pastel blue */
+            color: #ffffff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 500;
+            transition: all 0.2s ease-in-out;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); /* More visible shadow */
+        }
+        .button .fas {
+            margin-right: 8px;
+            font-size: 1em;
+        }
+        .button:hover {
+            background-color: #4a90e2; /* Even darker blue on hover */
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+        }
+        .button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Specific Button Colors */
+        .button-er {
+            background-color: #6bbd6b; /* Significantly darker soft pastel green for ER */
+        }
+        .button-er:hover {
+            background-color: #57a657; /* Darker soft green */
+        }
+        .button-patho {
+            background-color: #a66bbd; /* Significantly darker soft pastel lavender for Patho */
+        }
+        .button-patho:hover {
+            background-color: #9257a6; /* Darker soft lavender */
+        }
+
+        /* Tab Content (No tabs anymore, direct display) */
+        .tab-content {
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            animation: fadeIn 0.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .tab-content h3 {
+            margin-top: 0;
+            color: #5eaad0; /* Darker pastel blue for sub-headings */
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        /* Iframe Container Styles */
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            min-height: 700px;
+            border: 1px solid #b0b5bb; /* Darker border */
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fcfdfe; /* Very light background for iframe area */
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08); /* More visible inner shadow */
+        }
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .placeholder-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 680px;
+            color: #777; /* Darker grey for placeholder */
+            font-style: italic;
+            text-align: center;
+            padding: 10px;
+        }
+        .placeholder-text .fas {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            color: #b0b5bb; /* Darker grey for icon */
+        }
+        /* Hide placeholder if iframe has a valid src */
+        .iframe-container iframe[src^="https://docs.google.com/spreadsheets/d/"] + .placeholder-text {
+            display: none;
+        }
+         /* Show placeholder if src is still the template */
+        .iframe-container iframe[src="YOUR_GOOGLE_SHEET_SCHEDULE_EMBED_URL_HERE"] ~ .placeholder-text {
+            display: flex;
+        }
+
+
+        /* Instruction & Tracking Info Styles */
+        .instruction {
+            font-size: 0.95em;
+            color: #444; /* Darker text */
+            background-color: #d0e0e8; /* Darker pastel blue info box */
+            padding: 15px 20px;
+            border-left: 5px solid #5eaad0; /* Darker blue border */
+            margin-bottom: 25px;
+            border-radius: 8px;
+            line-height: 1.5;
+        }
+        .instruction .fas {
+            margin-right: 10px;
+            color: #5eaad0;
+        }
+        .instruction.warning {
+            background-color: #ffe0b3; /* Darker soft warning yellow */
+            border-left-color: #ffaa00; /* Darker warning border */
+            color: #664000; /* Even darker warning text */
+        }
+        .instruction.warning .fas {
+            color: #ff8800; /* Darker warning icon color */
+        }
+
+
+        .tracking-info ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .tracking-info li {
+            margin-bottom: 10px;
+            background-color: #fdfefe; /* Very light background */
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid #c0c5ca; /* Darker border */
+            transition: background-color 0.2s ease;
+        }
+        .tracking-info li:hover {
+            background-color: #eef2f5; /* Subtle hover effect */
+        }
+        .tracking-info li a {
+            text-decoration: none;
+            color: #2c4a5a; /* Much darker muted blue-grey for link */
+            font-weight: 500;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        .tracking-info li a:hover {
+            color: #5eaad0; /* Darker pastel blue on hover */
+            text-decoration: underline;
+        }
+        .tracking-info li a .fas {
+            margin-right: 10px;
+            font-size: 1.1em;
+            color: #5eaad0; /* Darker pastel blue for icon */
+        }
+        .tracking-info small.instruction {
+            margin-top: 8px;
+            font-size: 0.8em;
+            background-color: #d0e0e8;
+            border-left-color: #6bbd6b; /* Darker soft green for specific instruction */
+            color: #444;
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+        .tracking-info small.instruction .fas {
+            color: #6bbd6b; /* Darker soft green for specific instruction icon */
+        }
+
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #b0b5bb; /* Darker footer background */
+            color: #2c4a5a; /* Much darker muted blue-grey text */
+            margin-top: auto;
+            border-top: 1px solid #a0a5ab; /* Darker top border */
+            font-size: 0.9em;
+        }
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 20px;
+                margin: 20px auto;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            section {
+                padding: 20px;
+                margin-bottom: 25px;
+            }
+            section h2 {
+                font-size: 1.6em;
+            }
+            .button-container {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .button {
+                width: 100%;
+                padding: 10px 15px;
+                font-size: 1em;
+            }
+            .iframe-container {
+                min-height: 500px;
+            }
+            .placeholder-text {
+                height: 480px;
+            }
+            .instruction {
+                padding: 12px 15px;
+            }
+        }
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.6em;
+            }
+            section h2 {
+                font-size: 1.4em;
+            }
+            .button {
+                font-size: 0.95em;
+            }
+            .iframe-container {
+                min-height: 400px;
+            }
+            .placeholder-text {
+                height: 380px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-cash-register"></i> ระบบติดตาม Top-up Staff & Intern</h1>
+        </header>
+
+        <main>
+            <section class="quick-links">
+                <h2><i class="fas fa-external-link-alt"></i> จ่ายเงิน Top-up </h2>
+                <div class="button-container">
+                    <a href="https://forms.gle/rvx5QGJjhBPaAaoKA" target="_blank" class="button button-er">
+                        <i class="fas fa-first-aid"></i> Top up ER
+                    </a>
+                    <a href="https://forms.gle/fRrUjdr8Px5kvCcy5" target="_blank" class="button button-patho">
+                        <i class="fas fa-microscope"></i> Top up ชันสูตร
+                    </a>
+                </div>
+            </section>
+
+            <section class="intern-info">
+                <h2><i class="fas fa-clock"></i> ตารางเวร </h2>
+                <div id="schedule" class="tab-content" style="display: block;">
+                    <div class="iframe-container">
+                        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4exU8gkYDVGqBoa2u04E8a6BX5XSrKBnuPvDDrIISzg9VihppbFyNr-i_0I8NbaiFzXYe3otg1zTN/pubhtml?gid=734674429&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+                        <div class="placeholder-text">
+                            <i class="fas fa-table"></i>
+                            <span>ส่วนนี้จะแสดงตารางเวร Intern (กรุณาใส่โค้ด iframe ที่ถูกต้องจาก Google Sheets)</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="tracking-info">
+                <h2><i class="fas fa-chart-line"></i> ติดตามการจ่ายและรับเงิน</h2>
+                <p class="instruction"><i class="fas fa-info-circle"></i> สามารถตรวจสอบยอดเงินที่จ่ายและรับได้จาก Google Sheets โดยตรงผ่านลิงก์ด้านล่าง:</p>
+                <ul>
+                    <li>
+                        <a href="https://docs.google.com/spreadsheets/d/1z2mUc-34r-6Kpnqptf7loIRDUtQZXuVkaN4-m9_xDzw/edit?gid=1237598833#gid=1237598833" target="_blank">
+                           <i class="fas fa-chart-pie"></i> ตรวจสอบยอดการจ่ายและรับเงินทั้งหมด (Google Sheets) </a>
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Top-up Tracking Dashboard | ออกแบบและพัฒนาเพื่อความสะดวกในการติดตามข้อมูล</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Set current year in footer
+            document.getElementById("currentYear").textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
