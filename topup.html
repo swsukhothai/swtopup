@@ -12,8 +12,8 @@
             font-family: 'Chakra Petch', sans-serif; /* Updated Font */
             margin: 0;
             padding: 0;
-            background-color: #eef2f5; /* Slightly darker light grey-blue background */
-            color: #333; /* Even darker text for maximum readability */
+            background-color: #E0F7FA; /* Very light cyan/blue background */
+            color: #333333; /* Dark text for readability */
             line-height: 1.6;
             display: flex;
             flex-direction: column;
@@ -26,113 +26,115 @@
             margin: 30px auto;
             padding: 25px;
             background-color: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* More visible shadow */
+            border-radius: 25px; /* More rounded */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Prominent but soft shadow */
             flex-grow: 1;
         }
 
         /* Header Styles */
         header {
             background: #ffffff;
-            color: #2c4a5a; /* Much darker muted blue-grey text */
-            padding: 20px 20px 30px;
+            color: #004D40; /* Even darker teal for header text */
+            padding: 25px 20px 35px; /* More padding */
             text-align: center;
-            border-radius: 12px 12px 0 0;
-            border-bottom: 1px solid #b0b5bb; /* Darker bottom border */
+            border-radius: 16px 16px 0 0; /* Rounded top corners */
+            border-bottom: 3px solid #B2EBF2; /* Light cyan bottom border */
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 2.8em; /* Larger font size */
             font-weight: 700;
-            letter-spacing: 0.5px;
-            color: #2c4a5a; /* Consistent much darker muted blue-grey */
+            letter-spacing: 0.8px;
+            color: #004D40; /* Consistent darker teal */
         }
         header h1 .fas {
-            margin-right: 10px;
-            color: #5eaad0; /* Darker light sky blue accent for icon */
+            margin-right: 12px;
+            color: #4DD0E1; /* Bright cyan accent for icon */
         }
 
         /* Main Content Spacing */
         main {
-            padding-top: 20px;
+            padding-top: 25px; /* More space between header and first section */
         }
 
         /* Section Styles */
         section {
-            margin-bottom: 30px;
-            padding: 25px;
+            margin-bottom: 35px; /* More margin between sections */
+            padding: 30px; /* More padding */
             background-color: #ffffff;
-            border-radius: 12px;
-            border: 1px solid #c0c5ca; /* Darker border */
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* More visible shadow */
+            border-radius: 20px; /* More rounded corners */
+            border: 1px solid #E0F7FA; /* Very light cyan border */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Soft shadow */
         }
 
         section h2 {
-            color: #2c4a5a; /* Much darker muted blue-grey for section titles */
+            color: #004D40; /* Even darker teal for section titles */
             margin-top: 0;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #b0b5bb; /* Darker border */
-            font-size: 1.8em;
+            padding-bottom: 18px; /* More padding */
+            border-bottom: 3px solid #B2EBF2; /* Light cyan border */
+            font-size: 2em; /* Larger font size */
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 25px; /* More space below heading */
         }
         section h2 .fas {
-            margin-right: 10px;
-            color: #5eaad0; /* Darker light sky blue accent for icon */
+            margin-right: 12px;
+            color: #4DD0E1; /* Bright cyan accent for icon */
         }
 
         /* Button Styles */
         .button-container {
             display: flex;
-            gap: 15px;
+            gap: 20px; /* Increased gap */
             flex-wrap: wrap;
             justify-content: center;
-            margin-top: 15px;
+            margin-top: 20px; /* More margin */
         }
 
         .button {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            background-color: #5eaad0; /* Significantly darker pastel blue */
+            background-color: #FF4081; /* Vibrant pink/fuchsia */
             color: #ffffff;
-            padding: 12px 25px;
+            padding: 16px 35px; /* Larger padding */
             text-decoration: none;
-            border-radius: 8px;
-            font-size: 1.1em;
-            font-weight: 500;
-            transition: all 0.2s ease-in-out;
+            border-radius: 15px; /* More rounded */
+            font-size: 1.3em; /* Larger font */
+            font-weight: 600;
+            transition: all 0.3s ease-in-out;
             border: none;
             cursor: pointer;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); /* More visible shadow */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* More visible shadow */
         }
         .button .fas {
-            margin-right: 8px;
-            font-size: 1em;
+            margin-right: 10px;
+            font-size: 1.1em;
         }
         .button:hover {
-            background-color: #4a90e2; /* Even darker blue on hover */
-            transform: translateY(-2px);
-            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+            background-color: #E91E63; /* Darker pink on hover */
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
         }
         .button:active {
             transform: translateY(0);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         }
 
         /* Specific Button Colors */
         .button-er {
-            background-color: #6bbd6b; /* Significantly darker soft pastel green for ER */
+            background-color: #4FC3F7; /* Bright sky blue for ER */
+            color: #ffffff; /* White text for contrast */
         }
         .button-er:hover {
-            background-color: #57a657; /* Darker soft green */
+            background-color: #29B6F6; /* Darker sky blue */
         }
         .button-patho {
-            background-color: #a66bbd; /* Significantly darker soft pastel lavender for Patho */
+            background-color: #BA68C8; /* Medium purple for Patho */
+            color: #ffffff; /* White text for contrast */
         }
         .button-patho:hover {
-            background-color: #9257a6; /* Darker soft lavender */
+            background-color: #9C27B0; /* Darker purple */
         }
 
         /* Tab Content (No tabs anymore, direct display) */
@@ -148,78 +150,111 @@
         }
         .tab-content h3 {
             margin-top: 0;
-            color: #5eaad0; /* Darker pastel blue for sub-headings */
-            font-size: 1.4em;
-            margin-bottom: 15px;
+            color: #4DD0E1; /* Bright cyan for sub-headings */
+            font-size: 1.6em; /* Larger font */
+            margin-bottom: 20px;
         }
 
-        /* Iframe Container Styles */
-        .iframe-container {
-            position: relative;
-            width: 100%;
-            min-height: 700px;
-            border: 1px solid #b0b5bb; /* Darker border */
-            border-radius: 8px;
-            overflow: hidden;
-            background-color: #fcfdfe; /* Very light background for iframe area */
-            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08); /* More visible inner shadow */
+        /* Schedule Display Styles */
+        .schedule-display {
+            padding: 15px;
+            background-color: #ffffff; /* Very light background for schedule area */
+            border-radius: 12px;
+            border: 1px solid #B2EBF2; /* Light cyan border */
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
         }
-        .iframe-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        .placeholder-text {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 680px;
-            color: #777; /* Darker grey for placeholder */
-            font-style: italic;
-            text-align: center;
-            padding: 10px;
-        }
-        .placeholder-text .fas {
-            font-size: 3.5em;
+
+        .search-input {
+            width: calc(100% - 20px); /* Adjust width for padding */
+            padding: 12px 10px;
             margin-bottom: 20px;
-            color: #b0b5bb; /* Darker grey for icon */
+            border: 2px solid #B2EBF2; /* Light cyan border */
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-family: 'Chakra Petch', sans-serif;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+            transition: border-color 0.3s ease;
         }
-        /* Hide placeholder if iframe has a valid src */
-        .iframe-container iframe[src^="https://docs.google.com/spreadsheets/d/"] + .placeholder-text {
-            display: none;
+        .search-input:focus {
+            outline: none;
+            border-color: #4DD0E1; /* Bright cyan on focus */
         }
-         /* Show placeholder if src is still the template */
-        .iframe-container iframe[src="YOUR_GOOGLE_SHEET_SCHEDULE_EMBED_URL_HERE"] ~ .placeholder-text {
-            display: flex;
+
+        .table-container {
+            max-height: 600px; /* Fixed height for scrollable table */
+            overflow-y: auto; /* Enable vertical scrolling */
+            overflow-x: auto; /* Enable horizontal scrolling for table content */
+            border: 1px solid #B2EBF2; /* Light cyan border */
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95em;
+            table-layout: auto; /* Allow browser to automatically size columns */
+        }
+
+        .schedule-table th, .schedule-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #E0F7FA; /* Very light cyan border for rows */
+            white-space: normal; /* Allow text to wrap in all cells */
+            vertical-align: top; /* Align content to the top of the cell */
+        }
+
+        .schedule-table th {
+            background-color: #B2EBF2; /* Light cyan for header */
+            color: #004D40; /* Darker teal for header text */
+            font-weight: 700;
+            position: sticky;
+            top: 0; /* Make header sticky */
+            z-index: 1; /* Ensure header stays on top of content */
+        }
+
+        .schedule-table tbody tr:nth-child(even) {
+            background-color: #F8FDFF; /* Alternate row color (very light blue-white) */
+        }
+
+        .schedule-table tbody tr:hover {
+            background-color: #E0F7FA; /* Light cyan on hover */
+        }
+
+        .loading-indicator {
+            text-align: center;
+            padding: 30px;
+            color: #FF4081;
+            font-size: 1.2em;
+        }
+        .loading-indicator .fas {
+            margin-right: 10px;
         }
 
 
         /* Instruction & Tracking Info Styles */
         .instruction {
-            font-size: 0.95em;
-            color: #444; /* Darker text */
-            background-color: #d0e0e8; /* Darker pastel blue info box */
-            padding: 15px 20px;
-            border-left: 5px solid #5eaad0; /* Darker blue border */
-            margin-bottom: 25px;
-            border-radius: 8px;
-            line-height: 1.5;
+            font-size: 1em; /* Slightly larger font */
+            color: #555; /* Darker text */
+            background-color: #E0F7FA; /* Very light cyan info box */
+            padding: 18px 25px; /* More padding */
+            border-left: 8px solid #4DD0E1; /* Bright cyan border */
+            margin-bottom: 30px;
+            border-radius: 10px;
+            line-height: 1.6;
         }
         .instruction .fas {
-            margin-right: 10px;
-            color: #5eaad0;
+            margin-right: 12px;
+            color: #4DD0E1;
         }
         .instruction.warning {
-            background-color: #ffe0b3; /* Darker soft warning yellow */
-            border-left-color: #ffaa00; /* Darker warning border */
-            color: #664000; /* Even darker warning text */
+            background-color: #FFF9C4; /* Light yellow warning */
+            border-left-color: #FFEB3B; /* Bright yellow warning border */
+            color: #8A5A00; /* Dark brown text */
         }
         .instruction.warning .fas {
-            color: #ff8800; /* Darker warning icon color */
+            color: #F0C050; /* Darker warning icon color */
         }
 
 
@@ -228,56 +263,56 @@
             padding-left: 0;
         }
         .tracking-info li {
-            margin-bottom: 10px;
-            background-color: #fdfefe; /* Very light background */
-            padding: 12px 15px;
-            border-radius: 8px;
-            border: 1px solid #c0c5ca; /* Darker border */
+            margin-bottom: 15px; /* More margin */
+            background-color: #F8FDFF; /* Even lighter blue-white background */
+            padding: 15px 20px; /* More padding */
+            border-radius: 10px;
+            border: 1px solid #E0F7FA; /* Soft cyan border */
             transition: background-color 0.2s ease;
         }
         .tracking-info li:hover {
-            background-color: #eef2f5; /* Subtle hover effect */
+            background-color: #E0F7FA; /* Subtle hover effect */
         }
         .tracking-info li a {
             text-decoration: none;
-            color: #2c4a5a; /* Much darker muted blue-grey for link */
-            font-weight: 500;
+            color: #004D40; /* Darker teal for link */
+            font-weight: 600; /* Bolder font */
             transition: color 0.3s ease;
             display: flex;
             align-items: center;
         }
         .tracking-info li a:hover {
-            color: #5eaad0; /* Darker pastel blue on hover */
+            color: #4DD0E1; /* Bright cyan on hover */
             text-decoration: underline;
         }
         .tracking-info li a .fas {
             margin-right: 10px;
-            font-size: 1.1em;
-            color: #5eaad0; /* Darker pastel blue for icon */
+            font-size: 1.2em; /* Larger icon */
+            color: #4DD0E1; /* Bright cyan for icon */
         }
         .tracking-info small.instruction {
-            margin-top: 8px;
-            font-size: 0.8em;
-            background-color: #d0e0e8;
-            border-left-color: #6bbd6b; /* Darker soft green for specific instruction */
-            color: #444;
-            padding: 8px 12px;
-            border-radius: 6px;
+            margin-top: 10px;
+            font-size: 0.85em; /* Slightly larger font */
+            background-color: #E0F7FA; /* Light cyan */
+            border-left-color: #FFEB3B; /* Bright yellow for specific instruction */
+            color: #666;
+            padding: 10px 15px;
+            border-radius: 8px;
         }
         .tracking-info small.instruction .fas {
-            color: #6bbd6b; /* Darker soft green for specific instruction icon */
+            color: #FFEB3B; /* Bright yellow for specific instruction icon */
         }
 
 
         /* Footer Styles */
         footer {
             text-align: center;
-            padding: 25px;
-            background-color: #b0b5bb; /* Darker footer background */
-            color: #2c4a5a; /* Much darker muted blue-grey text */
+            padding: 30px; /* More padding */
+            background-color: #B2EBF2; /* Light cyan footer background */
+            color: #004D40; /* Darker teal text */
             margin-top: auto;
-            border-top: 1px solid #a0a5ab; /* Darker top border */
-            font-size: 0.9em;
+            border-top: 2px solid #E0F7FA; /* Soft cyan top border */
+            font-size: 1em; /* Slightly larger font */
         }
         footer p {
             margin: 0;
@@ -291,54 +326,53 @@
                 margin: 20px auto;
             }
             header h1 {
-                font-size: 2em;
+                font-size: 2.2em;
             }
             section {
-                padding: 20px;
-                margin-bottom: 25px;
+                padding: 25px;
+                margin-bottom: 30px;
             }
             section h2 {
-                font-size: 1.6em;
+                font-size: 1.8em;
             }
             .button-container {
-                flex-direction: row; /* Allow buttons to sit side-by-side */
-                justify-content: center; /* Center buttons if they wrap */
-                gap: 10px; /* Slightly smaller gap for mobile */
+                flex-direction: row;
+                justify-content: center;
+                gap: 15px;
             }
             .button {
-                /* Removed width: 100%; */
-                flex: 1 1 auto; /* Allow buttons to grow/shrink based on content and available space */
-                max-width: 180px; /* Adjusted max-width for tablets/larger phones */
-                padding: 10px 15px;
-                font-size: 1em;
+                flex: 1 1 auto;
+                max-width: 180px;
+                padding: 12px 20px;
+                font-size: 1.1em;
             }
-            .iframe-container {
-                min-height: 500px;
+            .schedule-table {
+                font-size: 0.9em;
             }
-            .placeholder-text {
-                height: 480px;
+            .schedule-table th, .schedule-table td {
+                padding: 10px;
             }
             .instruction {
-                padding: 12px 15px;
+                padding: 15px 20px;
             }
         }
         @media (max-width: 480px) {
             header h1 {
-                font-size: 1.6em;
+                font-size: 1.8em;
             }
             section h2 {
-                font-size: 1.4em;
+                font-size: 1.6em;
             }
             .button {
-                max-width: 150px; /* Adjusted max-width for smaller phones */
-                padding: 8px 12px; /* Reduced padding for smaller phones */
-                font-size: 0.9em; /* Reduced font size for smaller phones */
+                max-width: 150px;
+                padding: 10px 15px;
+                font-size: 1em;
             }
-            .iframe-container {
-                min-height: 400px;
+            .schedule-table {
+                font-size: 0.85em;
             }
-            .placeholder-text {
-                height: 380px;
+            .schedule-table th, .schedule-table td {
+                padding: 8px;
             }
         }
     </style>
@@ -365,12 +399,14 @@
             <section class="intern-info">
                 <h2><i class="fas fa-clock"></i> ตารางเวร </h2>
                 <div id="schedule" class="tab-content" style="display: block;">
-                    <div class="iframe-container">
-                        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4exU8gkYDVGqBoa2u04E8a6BX5XSrKBnuPvDDrIISzg9VihppbFyNr-i_0I8NbaiFzXYe3otg1zTN/pubhtml?widget=true&amp;headers=false"></iframe>
-                        <div class="placeholder-text">
-                            <i class="fas fa-table"></i>
-                            <span>ส่วนนี้จะแสดงตารางเวร Intern (กรุณาใส่โค้ด iframe ที่ถูกต้องจาก Google Sheets)</span>
-                        </div>
+                    <div class="schedule-display">
+                        <p class="instruction"><i class="fas fa-info-circle"></i> ค้นหารายชื่อตามตารางเวรได้ที่นี่:</p>
+                        <input type="text" id="scheduleSearch" placeholder="ค้นหาชื่อ, วันที่, หรือข้อมูลอื่นๆ..." class="search-input">
+                        <div id="scheduleTableContainer" class="table-container">
+                            <div class="loading-indicator">
+                                <i class="fas fa-spinner fa-spin"></i> กำลังโหลดตารางเวร...
+                            </div>
+                            </div>
                     </div>
                 </div>
             </section>
@@ -396,6 +432,90 @@
         document.addEventListener("DOMContentLoaded", function() {
             // Set current year in footer
             document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+            // --- Schedule Table Functionality ---
+            const scheduleTableContainer = document.getElementById('scheduleTableContainer');
+            const scheduleSearchInput = document.getElementById('scheduleSearch');
+            const loadingIndicator = scheduleTableContainer.querySelector('.loading-indicator');
+
+            // IMPORTANT: Replace this URL with your Google Sheet's published CSV URL.
+            // How to get this URL:
+            // 1. Open your Google Sheet.
+            // 2. Go to File > Share > Publish to web.
+            // 3. Under "Link", choose "Comma-separated values (.csv)" for the sheet you want to embed (e.g., "Sheet1").
+            // 4. Copy the generated URL. It should look something like:
+            //    https://docs.google.com/spreadsheets/d/e/2PACX-1vR4exU8gkYDVGqBoa2u04E8a6BX5XSrKBnuPvDDrIISzg9VihppbFyNr-i_0I8NbaiFzXYe3otg1zTN/pub?gid=734674429&single=true&output=csv
+            const GOOGLE_SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR4exU8gkYDVGqBoa2u04E8a6BX5XSrKBnuPvDDrIISzg9VihppbFyNr-i_0I8NbaiFzXYe3otg1zTN/pub?gid=734674429&single=true&output=csv';
+
+            let allScheduleData = []; // To store all data for filtering
+
+            // Function to parse CSV data
+            function parseCSV(csvText) {
+                const lines = csvText.split('\n').filter(line => line.trim() !== ''); // Filter out empty lines
+                if (lines.length === 0) return { headers: [], data: [] };
+
+                const headers = lines[0].split(',').map(header => header.trim());
+                const data = lines.slice(1).map(line => {
+                    // Simple split by comma, might need more robust CSV parser for complex cases
+                    return line.split(',').map(cell => cell.trim());
+                });
+                return { headers, data };
+            }
+
+            // Function to render the table
+            function renderTable(dataToRender) {
+                let tableHTML = '<table class="schedule-table"><thead><tr>';
+                // Create table headers
+                allScheduleData.headers.forEach(header => {
+                    tableHTML += `<th>${header}</th>`;
+                });
+                tableHTML += '</tr></thead><tbody>';
+
+                // Create table rows
+                dataToRender.forEach(row => {
+                    tableHTML += '<tr>';
+                    row.forEach(cell => {
+                        tableHTML += `<td>${cell}</td>`;
+                    });
+                    tableHTML += '</tr>';
+                });
+                tableHTML += '</tbody></table>';
+                scheduleTableContainer.innerHTML = tableHTML;
+            }
+
+            // Function to filter table rows based on search input
+            function filterTable() {
+                const searchTerm = scheduleSearchInput.value.toLowerCase();
+                const filteredData = allScheduleData.data.filter(row => {
+                    // Check if any cell in the row contains the search term
+                    return row.some(cell => cell.toLowerCase().includes(searchTerm));
+                });
+                renderTable(filteredData);
+            }
+
+            // Fetch data when the page loads
+            fetch(GOOGLE_SHEET_CSV_URL)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.text();
+                })
+                .then(csvText => {
+                    loadingIndicator.style.display = 'none'; // Hide loading indicator
+                    allScheduleData = parseCSV(csvText);
+                    if (allScheduleData.data.length > 0) {
+                        renderTable(allScheduleData.data);
+                        scheduleSearchInput.addEventListener('input', filterTable); // Add search listener
+                    } else {
+                        scheduleTableContainer.innerHTML = '<p class="instruction warning"><i class="fas fa-exclamation-circle"></i> ไม่พบข้อมูลตารางเวร หรือตารางเวรว่างเปล่า</p>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching or parsing Google Sheet data:', error);
+                    loadingIndicator.style.display = 'none'; // Hide loading indicator
+                    scheduleTableContainer.innerHTML = '<p class="instruction warning"><i class="fas fa-exclamation-circle"></i> ไม่สามารถโหลดตารางเวรได้ กรุณาลองใหม่อีกครั้ง หรือตรวจสอบลิงก์</p>';
+                });
         });
     </script>
 </body>
