@@ -301,11 +301,14 @@
                 font-size: 1.6em;
             }
             .button-container {
-                flex-direction: column;
-                gap: 12px;
+                flex-direction: row; /* Allow buttons to sit side-by-side */
+                justify-content: center; /* Center buttons if they wrap */
+                gap: 10px; /* Slightly smaller gap for mobile */
             }
             .button {
-                width: 100%;
+                /* Removed width: 100%; */
+                flex: 1 1 auto; /* Allow buttons to grow/shrink based on content and available space */
+                max-width: 200px; /* Set a maximum width for each button to prevent excessive stretching */
                 padding: 10px 15px;
                 font-size: 1em;
             }
