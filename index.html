@@ -308,7 +308,7 @@
             .button {
                 /* Removed width: 100%; */
                 flex: 1 1 auto; /* Allow buttons to grow/shrink based on content and available space */
-                max-width: 200px; /* Set a maximum width for each button to prevent excessive stretching */
+                max-width: 180px; /* Adjusted max-width for tablets/larger phones */
                 padding: 10px 15px;
                 font-size: 1em;
             }
@@ -330,7 +330,9 @@
                 font-size: 1.4em;
             }
             .button {
-                font-size: 0.95em;
+                max-width: 150px; /* Adjusted max-width for smaller phones */
+                padding: 8px 12px; /* Reduced padding for smaller phones */
+                font-size: 0.9em; /* Reduced font size for smaller phones */
             }
             .iframe-container {
                 min-height: 400px;
