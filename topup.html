@@ -7,14 +7,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        /* New October Palette: Deep Burgundy, Terra Cotta, Deep Gold */
+        /* New November Palette: Deep Blue, Muted Teal, Light Silver */
         :root {
-            --color-primary-dark: #880E4F; /* Deep Burgundy/Wine Red (Text, Main Accent) */
-            --color-secondary-action: #F4511E; /* Muted Orange/Terra Cotta (Buttons, Action) */
-            --color-highlight-gold: #FFB300; /* Deep Gold/Ochre (Icons, Warning Accent) */
-            --color-light-divider: #EDE7F6; /* Light Taupe/Cream (Dividers, Footer, Table Header) */
+            --color-primary-dark: #1565C0; /* Deep Blue (Text, Main Accent) */
+            --color-secondary-action: #00ACC1; /* Muted Teal/Cyan (Buttons, Action) */
+            --color-highlight-accent: #B0BEC5; /* Light Silver/Slate (Icons, Accent) */
+            --color-light-divider: #E3F2FD; /* Very Light Blue/Sky (Dividers, Table Header) */
             --color-background-light: #FAFAFA; /* Off-White Background */
-            --color-info-bg: #FCE4EC; /* Very Light Pink/Peach (Info Boxes) */
+            --color-info-bg: #E1F5FE; /* Very Pale Blue (Info Boxes, Alternate Row) */
         }
 
         /* General Styles */
@@ -60,7 +60,7 @@
         }
         header h1 .fas {
             margin-right: 12px;
-            color: var(--color-highlight-gold); /* Deep Gold accent for icon */
+            color: var(--color-highlight-accent); /* Light Silver accent for icon */
         }
 
         /* Section Styles */
@@ -74,7 +74,7 @@
         }
 
         section h2 {
-            color: var(--color-primary-dark); /* Deep Burgundy for section titles */
+            color: var(--color-primary-dark); /* Deep Blue for section titles */
             margin-top: 0;
             padding-bottom: 18px;
             border-bottom: 3px solid var(--color-light-divider); /* Light Divider border */
@@ -84,7 +84,7 @@
         }
         section h2 .fas {
             margin-right: 12px;
-            color: var(--color-highlight-gold); /* Deep Gold accent for icon */
+            color: var(--color-highlight-accent); /* Light Silver accent for icon */
         }
 
         /* Button Styles */
@@ -100,7 +100,7 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            background-color: var(--color-secondary-action); /* Terra Cotta */
+            background-color: var(--color-secondary-action); /* Muted Teal/Cyan */
             color: #ffffff;
             padding: 16px 35px;
             text-decoration: none;
@@ -117,7 +117,7 @@
             font-size: 1.1em;
         }
         .button:hover {
-            background-color: #E64A19; /* Darker Terra Cotta on hover */
+            background-color: #0097A7; /* Darker Teal on hover */
             transform: translateY(-3px);
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
         }
@@ -128,18 +128,18 @@
 
         /* Specific Button Colors - Use Primary/Secondary for consistency */
         .button-er {
-            background-color: var(--color-secondary-action); /* Terra Cotta for ER */
+            background-color: var(--color-secondary-action); /* Muted Teal/Cyan for ER */
             color: #ffffff;
         }
         .button-er:hover {
-            background-color: #E64A19;
+            background-color: #0097A7;
         }
         .button-patho {
-            background-color: #D84315; /* Slightly different shade of Orange/Red for Patho */
+            background-color: #00838F; /* Slightly darker Teal for Patho */
             color: #ffffff;
         }
         .button-patho:hover {
-            background-color: #C33B10;
+            background-color: #007682;
         }
 
         /* Tab Content */
@@ -155,7 +155,7 @@
         }
         .tab-content h3 {
             margin-top: 0;
-            color: var(--color-secondary-action); /* Terra Cotta for sub-headings */
+            color: var(--color-secondary-action); /* Muted Teal/Cyan for sub-headings */
             font-size: 1.6em;
             margin-bottom: 20px;
         }
@@ -182,7 +182,7 @@
         }
         .search-input:focus {
             outline: none;
-            border-color: var(--color-secondary-action); /* Terra Cotta on focus */
+            border-color: var(--color-secondary-action); /* Muted Teal/Cyan on focus */
         }
 
         .table-container {
@@ -211,8 +211,8 @@
         }
 
         .schedule-table th {
-            background-color: var(--color-light-divider); /* Light Divider for header */
-            color: var(--color-primary-dark); /* Deep Burgundy for header text */
+            background-color: var(--color-light-divider); /* Very Light Blue for header */
+            color: var(--color-primary-dark); /* Deep Blue for header text */
             font-weight: 700;
             position: sticky;
             top: 0;
@@ -220,17 +220,17 @@
         }
 
         .schedule-table tbody tr:nth-child(even) {
-            background-color: var(--color-info-bg); /* Very Light Pink/Peach Alternate row color */
+            background-color: var(--color-info-bg); /* Very Pale Blue Alternate row color */
         }
 
         .schedule-table tbody tr:hover {
-            background-color: #F8BBD0; /* Subtle Pink/Peach on hover */
+            background-color: #B3E5FC; /* Subtle Sky Blue on hover */
         }
 
         .loading-indicator {
             text-align: center;
             padding: 30px;
-            color: var(--color-secondary-action); /* Terra Cotta */
+            color: var(--color-secondary-action); /* Muted Teal/Cyan */
             font-size: 1.2em;
         }
         .loading-indicator .fas {
@@ -241,7 +241,7 @@
         .instruction {
             font-size: 1em;
             color: #555;
-            background-color: var(--color-info-bg); /* Very Light Pink/Peach info box */
+            background-color: var(--color-info-bg); /* Very Pale Blue info box */
             padding: 18px 25px;
             border-left: 8px solid var(--color-light-divider); /* Light Divider border */
             margin-bottom: 30px;
@@ -254,11 +254,11 @@
         }
         .instruction.warning {
             background-color: #FFFDE7; /* Very light yellow warning */
-            border-left-color: var(--color-highlight-gold); /* Deep Gold warning border */
+            border-left-color: var(--color-highlight-accent); /* Light Silver/Slate warning border */
             color: #616161; /* Darker text */
         }
         .instruction.warning .fas {
-            color: var(--color-highlight-gold); /* Deep Gold warning icon color */
+            color: var(--color-highlight-accent); /* Light Silver/Slate warning icon color */
         }
 
         .tracking-info ul {
@@ -267,51 +267,51 @@
         }
         .tracking-info li {
             margin-bottom: 15px;
-            background-color: var(--color-info-bg); /* Very Light Pink/Peach background */
+            background-color: var(--color-info-bg); /* Very Pale Blue background */
             padding: 15px 20px;
             border-radius: 10px;
             border: 1px solid var(--color-light-divider);
             transition: background-color 0.2s ease;
         }
         .tracking-info li:hover {
-            background-color: #F8BBD0; /* Subtle Pink/Peach hover effect */
+            background-color: #B3E5FC; /* Subtle Sky Blue hover effect */
         }
         .tracking-info li a {
             text-decoration: none;
-            color: var(--color-primary-dark); /* Deep Burgundy for link */
+            color: var(--color-primary-dark); /* Deep Blue for link */
             font-weight: 600;
             transition: color 0.3s ease;
             display: flex;
             align-items: center;
         }
         .tracking-info li a:hover {
-            color: var(--color-secondary-action); /* Terra Cotta on hover */
+            color: var(--color-secondary-action); /* Muted Teal/Cyan on hover */
             text-decoration: underline;
         }
         .tracking-info li a .fas {
             margin-right: 10px;
             font-size: 1.2em;
-            color: var(--color-highlight-gold); /* Deep Gold for icon */
+            color: var(--color-highlight-accent); /* Light Silver/Slate for icon */
         }
         .tracking-info small.instruction {
             margin-top: 10px;
             font-size: 0.85em;
             background-color: var(--color-info-bg);
-            border-left-color: var(--color-highlight-gold); /* Deep Gold for specific instruction */
+            border-left-color: var(--color-highlight-accent); /* Light Silver/Slate for specific instruction */
             color: #666;
             padding: 10px 15px;
             border-radius: 8px;
         }
         .tracking-info small.instruction .fas {
-            color: var(--color-highlight-gold); /* Deep Gold for specific instruction icon */
+            color: var(--color-highlight-accent); /* Light Silver/Slate for specific instruction icon */
         }
 
         /* Footer Styles */
         footer {
             text-align: center;
             padding: 30px;
-            background-color: var(--color-light-divider); /* Light Divider footer background */
-            color: var(--color-primary-dark); /* Deep Burgundy text */
+            background-color: var(--color-light-divider); /* Very Light Blue footer background */
+            color: var(--color-primary-dark); /* Deep Blue text */
             margin-top: auto;
             border-top: 2px solid #F5F5F5;
             font-size: 1em;
@@ -399,7 +399,7 @@
             </section>
 
             <section class="intern-info">
-                <h2><i class="fas fa-clock"></i> ตารางเวรตุลาคม </h2>
+                <h2><i class="fas fa-clock"></i> ตารางเวรพฤศจิกายน </h2>
                 <div id="schedule" class="tab-content" style="display: block;">
                     <div class="schedule-display">
                         <p class="instruction"><i class="fas fa-info-circle"></i> ตารางเวรแบ่งตามเวรเช้าบ่ายดึก ER จ่ายตามเวร ชันสูตรจ่ายตามวัน</p>
